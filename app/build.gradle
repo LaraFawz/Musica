@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+repositories {
+//    mavenLocal()
+
+    mavenCentral()
+
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.lara.sing"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+
+
+dependencies {
+//    configurations.all {
+//        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//            def requested = details.requested
+//            if (requested.group == 'com.android.support') {
+//                details.useVersion '26.0.+'
+//            }
+//        }
+//    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+
+    }
+
+//    configurations.all {
+//        resolutionStrategy {
+//            force 'com.android.support:support-annotations:24.2.1'
+//        }
+//    }
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //Firebase
+    //    compile 'com.google.firebase:firebase-database:9.6.1'
+    //    compile 'com.google.firebase:firebase-firestore:11.2.0'
+    //    compile 'com.google.firebase:firebase-messaging:9.6.1'
+    //     //Required only if Facebook login support is required
+    //    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    //    compile 'com.google.android.gms:play-services:9.6.1'
+    //    compile 'com.firebaseui:firebase-ui-auth:0.6.0'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'hu.kazocsaba:image-viewer:1.2.3'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.google.firebase:firebase-firestore:17.0.1'
+    compile 'com.google.firebase:firebase-database-collection:15.0.1'
+    //    compile 'com.google.firebase:firebase-core:11.2.0'
+    compile 'com.google.firebase:firebase-auth:16.0.2'
+    compile 'com.google.firebase:firebase-storage:16.0.1'
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+    //    compile 'com.google.firebase:firebase-config:11.0.4'
+    compile 'com.facebook.android:facebook-android-sdk:4.27.0'
+    compile 'com.facebook.android:facebook-login:4.27.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-auth:15.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.0'
+
+    // add dependency
+    compile 'com.android.support:multidex:1.0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

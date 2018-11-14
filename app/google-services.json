@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "154463773921",
+    "firebase_url": "https://sing-e6996.firebaseio.com",
+    "project_id": "sing-e6996",
+    "storage_bucket": "sing-e6996.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154463773921:android:d82b36465e027bad",
+        "android_client_info": {
+          "package_name": "com.example.lara.sing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154463773921-r70ub7m0fh4sc5kan0mjf14e20ei8fks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa_57FDsABCUWf9Ig9DIpfAYGzPOuOnIs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

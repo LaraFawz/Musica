@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_upload_record"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:paddingBottom="40dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon"/>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Ready To Share Your Voice!"
+            android:id="@+id/textView"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chooseRecord"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/background"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="146dp"
+            android:id="@+id/videoImageView"
+            android:src="@drawable/video"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:onClick="video"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="24dp"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"/>
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="146dp"
+            android:id="@+id/audioImageView"
+            android:src="@drawable/audio"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:onClick="audio"/>
+
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="play"-->
+    <!--android:id="@+id/button3"-->
+    <!--android:layout_alignTop="@+id/button2"-->
+    <!--android:layout_alignRight="@+id/textView"-->
+    <!--android:layout_alignEnd="@+id/textView" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/remainTxt"
+        android:background="@drawable/background"
+        android:layout_below="@+id/chooseRecord"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="5dp" />
+
+    <!--<Button-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Record Again"-->
+    <!--android:id="@+id/againBtn"-->
+    <!--android:layout_above="@+id/button2"-->
+    <!--android:layout_centerHorizontal="true" />-->
+
+</LinearLayout>

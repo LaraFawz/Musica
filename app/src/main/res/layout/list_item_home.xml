@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:background="@drawable/background"
+    android:minHeight="@dimen/list_item_height"
+    tools:context="com.example.lara.sing.HomeFragment">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:padding="5dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Title"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_textView"
+            android:layout_weight="0.54" />
+
+        <TextView
+            android:text="Time will be shown here"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:id="@+id/time_textView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:padding="5dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_listen_play"
+            android:id="@+id/listen_imageView"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_pause"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/pause_imageView"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_share"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/share_imageView" />
+
+    </LinearLayout>
+</LinearLayout>
